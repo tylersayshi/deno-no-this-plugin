@@ -1,0 +1,10 @@
+{
+  "name": "@tyler/no-this-plugin",
+  "version": "0.1.0",
+  "description": "Deno plugin to disallow `this`",
+  "repository": "https://github.com/tylersayshi/deno-no-this-plugin",
+  "license": "MIT",
+  "lint": {
+    "plugins": ["./plugin.ts"]
+  }
+}
