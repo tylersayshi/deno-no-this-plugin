@@ -4,6 +4,7 @@
   "description": "Deno plugin to disallow `this`",
   "repository": "https://github.com/tylersayshi/deno-no-this-plugin",
   "license": "MIT",
+  "exports": "./plugin.ts",
   "lint": {
     "plugins": ["./plugin.ts"]
   }
