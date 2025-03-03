@@ -1,3 +1,4 @@
+/** plugin for no-this rule */
 const plugin: Deno.lint.Plugin = {
   name: "no-this-plugin",
   rules: {
