@@ -4,7 +4,8 @@ A Deno plugin to disallow `this` in your code.
 
 ## Rule Details
 
-The rule is named `no-this` and it will error if you use `this` in any of the following ways:
+The rule is named `no-this` and it will error if you use `this` in any of the
+following ways:
 
 - In a function call
 - In an assignment
