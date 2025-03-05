@@ -11,7 +11,7 @@ following ways:
 - In an assignment
 - In a class constructor
 
-```sh
+```console
 error[no-this-plugin/no-this]: Can't touch `this`
  --> /Users/tylerlawson/gitspace/deno-plugin/main.ts:2:3
   |
