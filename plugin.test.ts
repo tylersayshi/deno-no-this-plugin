@@ -1,13 +1,17 @@
 import { assertEquals } from "jsr:@std/assert";
 import plugin from "./plugin.ts";
 
+const lintCode = (code: string) => {
+  return Deno.lint.runPlugin(plugin, "test.ts", code);
+};
+
 Deno.test("no assign this", () => {
   const code = `
 function foo() {
   this.thing = 1;
 }
 `;
-  const diagnostics = Deno.lint.runPlugin(plugin, "test.ts", code);
+  const diagnostics = lintCode(code);
   assertEquals(diagnostics, [
     {
       id: "no-this-plugin/no-this",
@@ -25,7 +29,7 @@ function foo() {
   this.thing();
 }
 `;
-  const diagnostics = Deno.lint.runPlugin(plugin, "test.ts", code);
+  const diagnostics = lintCode(code);
   assertEquals(diagnostics, [
     {
       id: "no-this-plugin/no-this",
@@ -45,7 +49,7 @@ class Foo {
   }
 }
 `;
-  const diagnostics = Deno.lint.runPlugin(plugin, "test.ts", code);
+  const diagnostics = lintCode(code);
   assertEquals(diagnostics, [
     {
       id: "no-this-plugin/no-this",
