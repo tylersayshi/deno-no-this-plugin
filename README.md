@@ -29,7 +29,7 @@ deno.json:
 ```json
 {
   "lint": {
-    "plugins": ["@tyler/no-this-plugin"]
+    "plugins": ["jsr:@tyler/no-this-plugin"]
   }
 }
 ```
